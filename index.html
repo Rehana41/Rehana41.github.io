@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rehana Hassan – AI/ML Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eef1f6;--surface:#fff;--ink:#14213d;--mute:#56627a;--line:#d5dbe6;--accent:#c47d00;--accent-ink:#fff;--teal:#1f6f78;--soft:#e2e8f2;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1830;--surface:#16213f;--ink:#eef1f8;--mute:#a4afc6;--line:#2a3860;--accent:#f2b134;--accent-ink:#14213d;--teal:#6cc4cc;--soft:#1d2a4d}}
+:root[data-theme="dark"]{--bg:#0f1830;--surface:#16213f;--ink:#eef1f8;--mute:#a4afc6;--line:#2a3860;--accent:#f2b134;--accent-ink:#14213d;--teal:#6cc4cc;--soft:#1d2a4d}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "Instrument Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","Instrument Sans",system-ui,sans-serif;line-height:1.1;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+nav{display:flex;gap:22px;justify-content:flex-end;padding:22px 0;font-size:15px;flex-wrap:wrap}
+nav a{text-decoration:none;color:var(--mute);font-weight:500}
+nav a:hover{color:var(--ink)}
+.hero{padding:48px 0 72px;display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(46px,8vw,92px);font-weight:800;letter-spacing:-.035em}
+.hero .role{font:700 clamp(20px,2.6vw,28px)/1.25 "Bricolage Grotesque",sans-serif;margin:18px 0 14px;color:var(--teal)}
+.hero p{color:var(--mute);max-width:46ch;margin:0 0 26px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 22px;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid var(--ink)}
+.btn.main{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn:hover{transform:translateY(-2px)}
+.trace{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px;font-size:14px}
+.trace h2{font-size:15px;color:var(--mute);font-weight:600;margin-bottom:14px}
+.step{display:flex;gap:12px;align-items:flex-start;padding:10px 12px;border-radius:12px;opacity:.38;transition:opacity .4s,background .4s}
+.step.on{opacity:1;background:var(--soft)}
+.step b{display:block;font-size:14px}
+.step span{color:var(--mute);font-size:13px;line-height:1.4}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--accent);margin-top:6px;flex:none}
+section{padding:64px 0;border-top:1px solid var(--line)}
+section>.wrap>h2{font-size:clamp(30px,4.5vw,46px);margin-bottom:12px;letter-spacing:-.02em}
+.sub{color:var(--mute);margin:0 0 34px;max-width:60ch}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.tab{font:600 15px "Instrument Sans",sans-serif;padding:10px 18px;border-radius:999px;border:1.5px solid var(--line);background:transparent;color:var(--ink);cursor:pointer}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:30px}
+.panel[hidden]{display:none}
+.panel h3{font-size:28px;margin-bottom:4px}
+.panel .tag{color:var(--teal);font-weight:600;margin:0 0 16px}
+.panel ul{margin:0;padding-left:20px}
+.panel li{margin-bottom:10px;max-width:72ch}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.chip{background:var(--soft);padding:4px 12px;border-radius:999px;font-size:14px;font-weight:500}
+.more{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:22px}
+.more div{border-left:3px solid var(--accent);padding:2px 0 2px 16px}
+.more h3{font-size:19px;margin-bottom:4px}
+.more p{margin:0;color:var(--mute);font-size:15px}
+.job{display:grid;grid-template-columns:200px 1fr;gap:28px;padding:26px 0;border-bottom:1px solid var(--line)}
+.job:last-child{border-bottom:0}
+.job .when{color:var(--mute);font-size:15px}
+.job h3{font-size:22px}
+.job .org{color:var(--teal);font-weight:600;margin:2px 0 10px}
+.job ul{margin:0;padding-left:20px}
+.job li{margin-bottom:8px;max-width:70ch}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.skills div{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px}
+.skills h3{font-size:18px;margin-bottom:10px}
+.skills p{margin:0;color:var(--mute);font-size:15px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.two h3{font-size:22px;margin-bottom:10px}
+.two p{margin:0 0 10px}.two li{margin-bottom:8px}.two ul{padding-left:20px;margin:0}
+.contact{text-align:center}
+.contact h2{font-size:clamp(34px,6vw,64px)}
+.contact .btns{justify-content:center;margin-top:24px}
+footer{padding:30px 0;text-align:center;color:var(--mute);font-size:14px}
+@media (max-width:800px){.hero,.two,.job{grid-template-columns:1fr}.job{gap:6px}.hero{padding-top:20px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+.tg{font-size:18px;background:none;border:1.5px solid var(--line);color:var(--ink);border-radius:50%;width:36px;height:36px;cursor:pointer;line-height:1}
+.tg:hover{border-color:var(--accent)}
+nav{align-items:center}
+.asks{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.ask{font:600 14px "Instrument Sans",sans-serif;padding:8px 14px;border-radius:999px;border:1.5px solid var(--accent);background:transparent;color:var(--ink);cursor:pointer}
+.ask:hover,.ask.sel{background:var(--accent);color:var(--accent-ink)}
+#steps{min-height:236px}
+#steps .step{opacity:1;animation:pop .45s ease both}
+@keyframes pop{from{opacity:0;transform:translateX(-10px)}to{opacity:1;transform:none}}
+.hint{color:var(--mute);padding:10px 12px}
+.bubble{margin:10px 0 0;background:var(--accent);color:var(--accent-ink);padding:12px 16px;border-radius:16px 16px 16px 4px;font-weight:500;animation:pop .45s ease both}
+.note{color:var(--mute);font-size:12px;margin-top:12px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:8px}
+.stats div{padding:26px 20px;border-right:1px solid var(--line)}
+.stats div:last-child{border-right:0}
+.stats b{display:block;font:800 clamp(38px,5vw,56px)/1 "Bricolage Grotesque",sans-serif;color:var(--accent);letter-spacing:-.03em}
+.stats span{color:var(--mute);font-size:15px}
+.panel,.skills div,.more div{transition:transform .2s}
+.skills div:hover{transform:translateY(-4px);border-color:var(--accent)}
+.dtab{font:600 15px 'Instrument Sans',sans-serif;padding:10px 18px;border-radius:999px;border:1.5px solid var(--line);background:transparent;color:var(--ink);cursor:pointer}
+.dtab[aria-selected='true']{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.demo{background:var(--surface);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.wb{display:flex;align-items:center;gap:7px;padding:10px 14px;background:var(--soft);border-bottom:1px solid var(--line);font-size:13px;color:var(--mute)}
+.wb i{width:10px;height:10px;border-radius:50%;background:var(--line)}
+.wb span{margin-left:8px}.wb a{margin-left:auto;color:var(--teal);font-weight:600}
+#stage{min-height:320px;padding:22px;display:flex;flex-direction:column;gap:10px;justify-content:center}
+#stage>*{animation:pop .5s ease both}
+.ctl{display:flex;align-items:center;gap:10px;padding:12px 16px;border-top:1px solid var(--line);flex-wrap:wrap}
+.ctl button{font:600 14px 'Instrument Sans',sans-serif;padding:6px 14px;border-radius:999px;border:1.5px solid var(--line);background:transparent;color:var(--ink);cursor:pointer}
+.cap{font-size:14px;color:var(--mute)}
+.dots{display:flex;gap:6px;margin-left:auto}.dots i{width:22px;height:5px;border-radius:3px;background:var(--line)}.dots i.on{background:var(--accent)}
+.pill{display:inline-block;background:var(--soft);padding:3px 10px;border-radius:999px;font-size:13px;font-weight:600;margin:2px 4px 2px 0}
+.pill.ok{background:var(--teal);color:var(--bg)}
+.card2{border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:var(--bg)}
+.card2 b{display:block;margin-bottom:4px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.br{display:flex;align-items:center;gap:10px;font-size:14px}.br span{width:80px}.br i{flex:1;height:8px;background:var(--soft);border-radius:4px;overflow:hidden}.br u{display:block;height:100%;background:var(--accent);animation:grow 1.2s ease both}.br em{font-style:normal;width:40px;text-align:right}
+@keyframes grow{from{width:0}}
+.tk{width:100%;max-width:420px;align-self:center}
+.me{align-self:flex-end;background:var(--soft);padding:10px 14px;border-radius:16px 16px 4px 16px;max-width:80%}
+.big{font-size:64px;text-align:center;line-height:1.1}
+.cap{display:none}
+#dd{font-size:18px;max-width:62ch;margin:0 0 16px}
+.sh{font:600 22px/1.3 'Bricolage Grotesque',sans-serif;padding-bottom:6px}
+.sh b{display:block;font:600 13px 'Instrument Sans',sans-serif;color:var(--teal);margin-bottom:2px}
+.ctl button{padding:9px 18px;font-size:15px}
+[hidden]{display:none!important}
+.fp{border:1px solid var(--line);border-radius:14px;max-width:560px;margin:22px auto;overflow:hidden;background:var(--surface)}
+.fh{display:flex;align-items:center;gap:12px;padding:12px 16px;background:var(--ink);color:var(--bg)}
+.fh b{font:800 18px 'Bricolage Grotesque',sans-serif}.fh span{margin-left:auto;font-size:14px;font-variant-numeric:tabular-nums}
+.fh button{font:600 13px 'Instrument Sans',sans-serif;padding:5px 14px;border-radius:999px;border:0;background:var(--accent);color:var(--accent-ink);cursor:pointer}
+.fst{padding:8px 16px;font-size:14px;color:var(--mute);border-bottom:1px solid var(--line)}
+.ftabs{display:flex;border-bottom:1px solid var(--line)}
+.ftb{flex:1;padding:11px 4px;background:none;border:0;border-bottom:3px solid transparent;font:600 14px 'Instrument Sans',sans-serif;color:var(--mute);cursor:pointer}
+.ftb.on{color:var(--ink);border-color:var(--accent)}
+.fb{padding:16px;display:flex;flex-direction:column;gap:10px;min-height:320px}
+.fb .g2{grid-template-columns:1fr}
+.fl{font-weight:600;font-size:14px;color:var(--mute)}
+.opt{text-align:left;font:400 14px/1.5 'Instrument Sans',sans-serif;border:1.5px solid var(--line);border-radius:12px;padding:12px;background:var(--bg);color:var(--ink);cursor:pointer}
+.opt:hover{border-color:var(--accent)}.opt b{display:block;margin-bottom:4px}
+.opt em{display:block;margin-top:6px;color:var(--mute);font-style:normal;font-size:13px}
+.fq{display:flex;gap:8px}.fq input{flex:1;padding:10px;border-radius:10px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);font:inherit;min-width:0}
+.dots i{cursor:pointer;height:8px;width:26px}
+@media (max-width:600px){.g2{grid-template-columns:1fr}.dots{margin-left:0}}
+.cert{display:inline-block;margin-left:10px;font-size:14px;font-weight:600;color:var(--teal);text-decoration:underline}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav aria-label="Sections"><a href="#work">Projects</a><a href="#demos">Demos</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#about">Education</a><a href="#contact">Contact</a></nav>
+
+<header class="hero">
+<div>
+<h1>Rehana Hassan</h1>
+<div class="role">AI/ML Engineer building agents, RAG systems and real-time vision pipelines</div>
+<p>I build AI that does real work: assistants that use a company’s documents and business tools, a copilot that helps salespeople during live calls, and cameras that count truck axles automatically. Based in Srinagar, Kashmir.</p>
+<div class="btns"><a class="btn main" href="#work">See my projects</a><a class="btn" href="mailto:rehanahassan785@gmail.com">Email me</a></div>
+</div>
+<div class="trace" aria-label="How a Neuragent request flows">
+<h2>What happens when a user messages an agent I built</h2>
+<div class="step"><i class="dot"></i><div><b>Recall</b><span>Past facts are pulled from vector memory in Qdrant.</span></div></div>
+<div class="step"><i class="dot"></i><div><b>Retrieve</b><span>Knowledge base chunks are matched by semantic search.</span></div></div>
+<div class="step"><i class="dot"></i><div><b>Act</b><span>The agent calls tools: Salesforce, Odoo, flight APIs.</span></div></div>
+<div class="step"><i class="dot"></i><div><b>Answer</b><span>A sub-agent drafts the reply with the chosen LLM.</span></div></div>
+</div>
+</header>
+</div>
+
+<section id="work"><div class="wrap">
+<h2>Projects</h2>
+<p class="sub">Three production systems from my work at Cogveel Technologies, plus smaller ML projects.</p>
+<div class="tabs" role="tablist">
+<button class="tab" role="tab" aria-selected="true" data-p="p0">Neuragent</button>
+<button class="tab" role="tab" aria-selected="false" data-p="p1">FINN.AI</button>
+<button class="tab" role="tab" aria-selected="false" data-p="p2">Ajman EPS</button>
+</div>
+<div class="panel" id="p0" role="tabpanel">
+<h3>Neuragent</h3><p class="tag">Lets a company build its own AI assistant that uses its documents and tools</p>
+<ul>
+<li>Architected a multi-agent backend on LangChain Deep Agents with sub-agent orchestration, so businesses can create, configure and deploy agents with their own tools and knowledge bases.</li>
+<li>Supports OpenAI, Gemini, Anthropic, Groq and DeepSeek behind one interface.</li>
+<li>Built an agentic memory that extracts facts from conversations with an LLM and stores them as embeddings in Qdrant for recall in later sessions.</li>
+<li>Designed a RAG pipeline over PDF, DOCX, XLSX, HTML and image files with configurable chunking.</li>
+<li>Connected agents to Amadeus (OpenAPI), Salesforce (OAuth CRUD) and Odoo (Model Context Protocol), so they discover and call real business endpoints at runtime.</li></ul>
+<div class="chips"><span class="chip">FastAPI</span><span class="chip">LangChain</span><span class="chip">Qdrant</span><span class="chip">MCP</span><span class="chip">OpenAI Embeddings</span></div>
+</div>
+<div class="panel" id="p1" role="tabpanel" hidden>
+<h3>FINN.AI</h3><p class="tag">Coaches a salesperson with the right words during a live call</p>
+<ul>
+<li>Built a live meeting copilot: Silero VAD and Deepgram Nova-2 transcribe calls with speaker diarization, with latency under 300 ms.</li>
+<li>GPT-4o mini detects topics, objections and sentiment, then sends coaching nudges to the rep.</li>
+<li>RAG battle cards use all-MiniLM-L6-v2 and pgvector, with a Tavily web-search fallback, streamed over WebSockets.</li>
+<li>Pre-call pipeline enriches prospects through the Apollo API (tech stack, revenue, buyer personas) and writes a sales brief.</li>
+<li>A custom Chrome extension shows live coaching cards and grounds the sales chatbot during the call.</li></ul>
+<div class="chips"><span class="chip">FastAPI</span><span class="chip">Deepgram</span><span class="chip">OpenRouter</span><span class="chip">pgvector</span><span class="chip">Tavily</span><span class="chip">WebSockets</span></div>
+<p style="margin:16px 0 0"><a href="https://finnai.io/" target="_blank" rel="noopener"><b>Visit the live product: finnai.io</b></a></p>
+</div>
+<div class="panel" id="p2" role="tabpanel" hidden>
+<h3>Ajman EPS</h3><p class="tag">Cameras that automatically count truck axles at 11 municipal sites</p>
+<ul>
+<li>Built a computer vision pipeline that detects trucks and axles, counts axles and tracks vehicles across 11 crusher sites, using YOLOv8 with the BoT-SORT tracker.</li>
+<li>Designed a three-stage backend: entry ANPR, axle detection, exit ANPR.</li>
+<li>Added background axle processing, exit event buffering and hourly jobs that reconcile completed trips.</li></ul>
+<div class="chips"><span class="chip">YOLOv8</span><span class="chip">BoT-SORT</span><span class="chip">OpenCV</span><span class="chip">FastAPI</span><span class="chip">PostgreSQL</span><span class="chip">SQLAlchemy</span></div>
+</div>
+<div class="more">
+<div><h3>Movie recommender</h3><p>Content-based engine with cosine similarity and TMDB data, plus 97% accurate sentiment analysis with Naive Bayes.</p><a class="cert" style="margin:6px 0 0" href="https://github.com/Rehana41/MovieRecommendationSystemWithSentimentAnalysis" target="_blank" rel="noopener">View on GitHub</a></div>
+<div><h3>Face emotion detection</h3><p>CNN with data augmentation and early stopping, served in Flask and validated with a confusion matrix.</p><a class="cert" style="margin:6px 0 0" href="https://github.com/Rehana41/HumanFacialEmotionsDetectionUsingCNN" target="_blank" rel="noopener">View on GitHub</a></div>
+<div><h3>Resume screening</h3><p>TF-IDF with SVM, KNN and Random Forest, in a Streamlit app that reads PDF, DOCX and TXT files.</p><a class="cert" style="margin:6px 0 0" href="https://github.com/Rehana41/ResumeScreeningApp" target="_blank" rel="noopener">View on GitHub</a></div>
+</div>
+</div></section>
+
+<section id='demos'><div class='wrap'><h2>Project demos</h2><p class='sub'>Watch each project in action. Pick one and it plays on a loop.</p>
+<div class='tabs'><button class='dtab' aria-selected='true' data-d='n'>Neuragent</button><button class='dtab' aria-selected='false' data-d='f'>FINN.AI</button><button class='dtab' aria-selected='false' data-d='e'>Ajman EPS</button><button class='dtab' aria-selected='false' data-d='m'>Movie recommender</button><button class='dtab' aria-selected='false' data-d='h'>Face emotion</button><button class='dtab' aria-selected='false' data-d='r'>Resume screening</button></div>
+<p id='dd'></p>
+<div class='demo'><div class='wb'><i></i><i></i><i></i><span id='wt'></span><a id='vis' href='https://finnai.io/#try' target='_blank' rel='noopener' hidden>Open the live demo on finnai.io</a></div><div id='stage' aria-live='polite'></div>
+<div id='finnx' hidden><div class='fp'><div class='fh'><b>FINN</b><span id='fclock'>Call duration 00:03</span><button id='fs'>Stop</button></div><div class='fst'>Sales stage: <b>Discovery</b></div><div class='ftabs'><button class='ftb on' data-t='c'>Coaching</button><button class='ftb' data-t='a'>Ask Finn</button><button class='ftb' data-t='m'>Metrics</button><button class='ftb' data-t='t'>Transcript</button></div><div class='fb' id='fb'></div></div></div><div class='ctl'><button id='pp'>Pause</button><button id='nx'>Next</button><span class='cap' id='cap'></span><span class='dots' id='dots'></span></div></div>
+<p class='note'>These are animated walkthroughs I built to show how each project works. The FINN.AI tab is a working copy of the panel from the interactive demo on finnai.io: click the cards and tabs, or open the live demo with the link above.</p></div></section>
+
+<section id="experience"><div class="wrap">
+<h2>Experience</h2>
+<p class="sub">From internships in NLP and RAG to leading production AI builds.</p>
+<div class="job"><div class="when">Dec 2025 – present</div><div><h3>AI/ML Engineer</h3><div class="org">Cogveel Technologies, Srinagar</div>
+<ul><li>Designed Neuragent, an enterprise agent platform with multi-LLM backends, dynamic tool loading and RAG knowledge bases.</li><li>Built FINN.AI, which transcribes live calls and delivers sub-second battle cards and nudges over WebSockets.</li><li>Developed the Ajman Environmental Passage System for axle detection and vehicle tracking at 11 sites.</li></ul></div></div>
+<div class="job"><div class="when">May – Sep 2025</div><div><h3>AI/ML Intern</h3><div class="org">LeLafe IT Solutions, Budgam<a class="cert" href="https://drive.google.com/file/d/1x-KLU4I4WCvp0pvWqMhmKsTpk8r6btGn/view?usp=drivesdk" target="_blank" rel="noopener">View certificate</a></div>
+<ul><li>Built a document Q&amp;A system with LangChain, OpenAI Embeddings, ChromaDB and a FastAPI backend with authentication.</li><li>Created an n8n workflow that analyzes outfit photos with the OpenAI API and recommends matching shoes with shopping links.</li></ul></div></div>
+<div class="job"><div class="when">Mar – Apr 2025</div><div><h3>AI Intern</h3><div class="org">Prasunet Company, Remote<a class="cert" href="https://drive.google.com/file/d/1y44hRTwfKpVTIBfrQUK4JWc7MwuURpj4/view" target="_blank" rel="noopener">View certificate</a></div>
+<ul><li>Built an automated essay grading system with TF-IDF and Word2Vec features and BiLSTM models, evaluated by MSE/RMSE with bias mitigation, served through Flask.</li></ul></div></div>
+<div class="job"><div class="when">Dec 2024 – Jan 2025</div><div><h3>AI Intern</h3><div class="org">Edunet Foundation (Microsoft &amp; SAP initiative)<a class="cert" href="https://drive.google.com/file/d/1jRdSPiWB3UmfS9uCAGNmUagzJZBfd7_k/view" target="_blank" rel="noopener">View certificate</a></div>
+<ul><li>Implemented full ML pipelines: preprocessing, feature engineering, training, evaluation and EDA.</li></ul></div></div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+<h2>Skills</h2>
+<p class="sub">The tools I reach for, grouped by the kind of problem they solve.</p>
+<div class="skills">
+<div><h3>LLM engineering</h3><p>RAG, LangChain, Deep Agents, agentic memory, prompt engineering, embeddings, Sentence-Transformers, LoRA and QLoRA fine-tuning</p></div>
+<div><h3>Vector databases</h3><p>Qdrant, pgvector, FAISS, ChromaDB</p></div>
+<div><h3>Computer vision</h3><p>YOLOv8, BoT-SORT tracking, OpenCV, PyTorch, TensorFlow</p></div>
+<div><h3>Machine learning</h3><p>Scikit-Learn, Keras, deep learning, NLP with NLTK, feature engineering</p></div>
+<div><h3>Backend and APIs</h3><p>FastAPI, Flask, Streamlit, WebSockets, REST, PostgreSQL, SQLAlchemy, Neon</p></div>
+<div><h3>Model providers</h3><p>OpenAI, Google Gemini, Anthropic Claude, Groq, OpenRouter, Deepgram, Tavily</p></div>
+<div><h3>Languages and data</h3><p>Python, C, SQL, Pandas, NumPy, Matplotlib, Seaborn, Plotly, BeautifulSoup</p></div>
+<div><h3>Developer tools</h3><p>Git, GitHub, Docker, Postman, VS Code, Jupyter, Google Colab</p></div>
+</div>
+</div></section>
+
+<section id="about"><div class="wrap two">
+<div><h3>Education</h3>
+<p><b>B.Tech, Computer Science and Engineering</b><br>University of Kashmir, North Campus, Baramulla<br><span style="color:var(--mute)">2020 – 2024 · CGPA 8.57</span></p></div>
+<div><h3>Certifications</h3>
+<ul><li>Machine Learning Specialization, Andrew Ng (Stanford, Coursera)<a class="cert" href="https://www.coursera.org/account/accomplishments/specialization/certificate/NDRHLFJODIQW" target="_blank" rel="noopener">View certificate</a></li><li>AI-ML Engineer Foundation, Reliance Foundation<a class="cert" href="https://drive.google.com/file/d/1TEoMKJE4ZrJReOLXzXp0KhUnTPSUjVH2/view" target="_blank" rel="noopener">View certificate</a></li><li>Career Essentials in Generative AI, Microsoft and LinkedIn<a class="cert" href="https://www.linkedin.com/learning/certificates/b3d1135592870980019752bf7362d94810bc912796d0929acca780965c4d8c64?trk=share_certificate" target="_blank" rel="noopener">View certificate</a></li><li>Python for Data Science, IBM<a class="cert" href="https://courses.cognitiveclass.ai/certificates/13819152680a47718ead047f3f5d01f8" target="_blank" rel="noopener">View certificate</a></li></ul></div>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap">
+<h2>Let’s build something that ships.</h2>
+<p class="sub" style="margin-inline:auto">Open to AI/ML engineering roles and projects across machine learning, deep learning, NLP, generative AI, agents, RAG and computer vision.</p>
+<div class="btns"><a class="btn main" href="mailto:rehanahassan785@gmail.com">rehanahassan785@gmail.com</a><a class="btn" href="tel:+917889627440">+91 78896 27440</a><a class="btn" href="https://www.linkedin.com/in/rehana-hassan-8963032b4" target="_blank" rel="noopener">LinkedIn</a><a class="btn" href="https://github.com/Rehana41" target="_blank" rel="noopener">GitHub</a></div>
+</div></section>
+<footer>© 2026 Rehana Hassan</footer>
+
+<script>
+(function(){
+var tabs=document.querySelectorAll('.tab');
+tabs.forEach(function(t){t.addEventListener('click',function(){
+tabs.forEach(function(x){x.setAttribute('aria-selected',x===t?'true':'false');document.getElementById(x.dataset.p).hidden=x!==t;});
+});});
+var steps=document.querySelectorAll('.step'),i=0;
+function tick(){steps.forEach(function(s,n){s.classList.toggle('on',n===i)});i=(i+1)%steps.length;}
+tick();
+if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){setInterval(tick,1800);}else{steps.forEach(function(s){s.classList.add('on')});}
+var rd=window.matchMedia('(prefers-reduced-motion: reduce)').matches,g=function(i){return document.getElementById(i)};
+function bar(l,v){return `<div class='br'><span>${l}</span><i><u style='width:${v}%'></u></i><em>${v}%</em></div>`}
+function truck(b,p){return `<svg viewBox='0 0 320 120' class='tk' role='img' aria-label='Truck with detected axles'><rect x='20' y='30' width='200' height='50' rx='6' fill='var(--soft)' stroke='var(--ink)'/><rect x='220' y='44' width='60' height='36' rx='6' fill='var(--soft)' stroke='var(--ink)'/>`+[60,100,140,240].map(function(x,i){return `<circle cx='${x}' cy='88' r='14' fill='var(--ink)'/>`+(i<b?`<rect x='${x-18}' y='70' width='36' height='36' fill='none' stroke='var(--accent)' stroke-width='3'/>`:'')}).join('')+(p?`<rect x='284' y='62' width='30' height='14' fill='var(--accent)'/>`:'')+`</svg>`}
+var D={
+n:{t:'Neuragent: agent builder',s:[
+[4,'Create an agent and pick a model',`<div class='card2'><b>New agent: Travel Desk</b>Instructions: help staff book trips within company policy.</div><div><span class='pill ok'>OpenAI</span><span class='pill'>Gemini</span><span class='pill'>Anthropic</span><span class='pill'>Groq</span><span class='pill'>DeepSeek</span></div><div class='card2'><b>Sub-agents</b>Research agent and booking agent</div>`],
+[4,'Upload a knowledge base',`<div class='card2'><b>Files</b>travel-policy.pdf, price-list.xlsx, faq.docx, office-map.png</div>${bar('Embedding',100)}<div><span class='pill ok'>Stored in Qdrant</span></div>`],
+[4,'Connect business tools',`<div class='g2'><div class='card2'><b>Amadeus</b>Flights via OpenAPI <span class='pill ok'>Connected</span></div><div class='card2'><b>Salesforce</b>CRM via OAuth <span class='pill ok'>Connected</span></div><div class='card2'><b>Odoo</b>ERP via MCP <span class='pill ok'>Connected</span></div></div>`],
+[6,'Chat: the agent remembers and acts',`<div class='me'>Find me a flight to Dubai next week</div><div class='bubble'>Searching flights with Amadeus within your policy…</div><div class='me'>I prefer mornings</div><div class='bubble'>Noted. Saved to memory for next time.</div>`]]},
+f:{t:'FINN.AI: live sales call',l:1,s:[
+[4,'A call starts and Finn listens',`<div class='card2'><b>Discovery call</b>Sales stage: Discovery</div><div class='card2'><b>John (Prospect)</b>“It’s a bit over our budget.”</div><div><span class='pill'>Listening…</span></div>`],
+[6,'Two battle cards, matched to the deal stage',`<div class='g2'><div class='card2'><b>A · Qualify</b>“Is this a ‘nice to fix’ or a ‘have to fix’ for your team right now?”</div><div class='card2'><b>B · Reshape</b>“What would you ideally want to achieve despite the chaos this quarter?”</div></div>`],
+[5,'Ask Finn a question mid-call',`<div class='me'>What’s our price for a 20-seat team?</div><div class='bubble'>Answered from your knowledge base in under a second, with sources linked.</div>`],
+[5,'Live metrics with the reason behind each score',`<div class='card2'><b>Sentiment</b>Neutral</div><div class='card2'><b>Engagement</b>Low</div><div class='card2'><b>Buying intent</b>Cold. The prospect keeps talking about their existing setup.</div>`],
+[4,'After the call: the manager console',`<div class='card2'><b>Recent calls</b>Google Meet · Lucas Martin · Cold · 2 of 5 battle cards used</div><div class='card2'>Zoom · Sofia Reyes · Neutral · 4 of 6 battle cards used</div>`]]},
+e:{t:'Ajman EPS: truck monitoring',s:[
+[4,'Entry ANPR reads the plate',`${truck(0,true)}<div class='card2'><b>Stage 1 · Entry ANPR</b>Plate captured and trip opened</div>`],
+[5,'YOLOv8 finds the axles',`${truck(4)}<div class='card2'><b>Stage 2 · Axle detection</b>BoT-SORT keeps one ID per truck. Axles counted: 4</div>`],
+[4,'Exit ANPR closes the trip',`${truck(4,true)}<div class='card2'><b>Stage 3 · Exit ANPR</b>Exit event matched. An hourly job reconciles completed trips.</div>`]]},
+m:{t:'Movie recommender',s:[
+[3,'Search a movie you like',`<div class='card2'><b>Search</b>Inception</div>`],
+[5,'Content-based recommendations',`<div class='g2'><div class='card2'><b>Interstellar</b>Close match</div><div class='card2'><b>The Prestige</b>Close match</div><div class='card2'><b>Memento</b>Close match</div><div class='card2'><b>Tenet</b>Close match</div></div>`],
+[4,'Reviews scored by sentiment',`<div class='card2'>“Mind-bending and beautifully made.”</div><div><span class='pill ok'>Positive</span> Naive Bayes classifier</div>`]]},
+h:{t:'Face emotion detection',s:[
+[3,'A face is found in the image',`<div class='big'>🙂</div><div class='card2'>Face detected and resized for the CNN</div>`],
+[5,'The CNN predicts the emotion',`<div class='big'>😮</div>${bar('Surprise',72)}${bar('Happy',18)}${bar('Neutral',10)}`],
+[4,'Checked with a confusion matrix',`<div class='card2'><b>Model evaluation</b>Confusion matrix and classification report for every emotion</div>`]]},
+r:{t:'Resume screening',s:[
+[3,'Upload a resume',`<div class='card2'><b>resume.pdf</b>PDF, DOCX and TXT files are supported</div>`],
+[4,'The text is cleaned and vectorized',`<div class='card2'><b>NLP pipeline</b>NLTK cleaning, then TF-IDF features</div>`],
+[5,'Three models predict the job category',`<div class='g2'><div class='card2'><b>SVM</b>Data Science</div><div class='card2'><b>KNN</b>Data Science</div><div class='card2'><b>Random Forest</b>Data Science</div></div><div><span class='pill ok'>Predicted: Data Science</span></div>`]]}
+};
+D={
+n:{t:'Neuragent: a sales assistant connected to a CRM',d:'Neuragent lets a company build its own AI assistant. In this example, the assistant works with the company’s CRM, the tool where customer and deal details are kept.',s:[
+[5,'Create the assistant',`<div class='card2'><b>Sales Assistant</b>Job: help the sales team manage leads and deals.</div><div>Choose any AI model: <span class='pill ok'>OpenAI</span><span class='pill'>Gemini</span><span class='pill'>Anthropic</span><span class='pill'>Groq</span><span class='pill'>DeepSeek</span></div>`],
+[5,'Give it your company documents',`<div class='card2'><b>Uploaded files</b>pricing.pdf, product-faq.docx, sales-playbook.pdf</div>${bar('Reading',100)}<div><span class='pill ok'>It can now answer from these files</span></div>`],
+[5,'Connect it to your CRM',`<div class='card2'><b>Salesforce CRM</b>Securely connected. The assistant can find, add and update customer records.</div><div><span class='pill ok'>Connected</span><span class='pill'>Odoo ERP</span><span class='pill'>Flight booking</span></div>`],
+[7,'Ask it to update the CRM',`<div class='me'>Add a new lead: Priya Sharma from Acme, wants 20 seats.</div><div class='bubble'>Done. I added Priya Sharma (Acme) as a new lead in Salesforce.</div><div class='me'>Show my deals closing this month.</div><div class='bubble'>Here are your deals closing this month, with Acme at the top.</div>`],
+[5,'It remembers for next time',`<div class='card2'><b>Memory saved</b>Priya prefers email over phone calls.</div><div class='me'>Follow up with Priya.</div><div class='bubble'>Since Priya prefers email, I drafted an email follow-up for you.</div>`]]},
+f:{t:'FINN.AI: live sales call',l:1,d:'FINN.AI listens to a sales call and shows the salesperson what to say next, in under a second. Click the cards and tabs below to try it.',s:[
+[4,'The customer raises a concern',`<div class='card2'><b>John (customer)</b>“It’s a bit over our budget.”</div><div><span class='pill ok'>FINN is listening</span></div>`],
+[6,'FINN suggests two replies',`<div class='g2'><div class='card2'><b>Option A</b>“Is this a ‘nice to fix’ or a ‘have to fix’ for your team right now?”</div><div class='card2'><b>Option B</b>“What would you ideally want to achieve this quarter?”</div></div>`],
+[5,'Ask a question during the call',`<div class='me'>What’s our price for a 20-seat team?</div><div class='bubble'>The answer appears in under a second, taken from your own documents.</div>`],
+[5,'See how the call is going',`<div class='card2'><b>Mood</b>Neutral</div><div class='card2'><b>Interest</b>Low</div><div class='card2'><b>Chance of buying</b>Low, because the customer keeps talking about their current setup.</div>`],
+[4,'Review the call afterwards',`<div class='card2'><b>Call list</b>Google Meet, Lucas Martin: low interest, 2 of 5 suggestions used</div><div class='card2'>Zoom, Sofia Reyes: neutral, 4 of 6 suggestions used</div>`]]},
+e:{t:'Ajman EPS: truck monitoring',d:'Cameras at crusher sites read each truck’s number plate and count its axles automatically, so nobody has to check by hand.',s:[
+[4,'The truck arrives and its plate is read',`${truck(0,true)}<div class='card2'><b>Entry camera</b>Plate captured and a new trip is opened.</div>`],
+[5,'The axles are found and counted',`${truck(4)}<div class='card2'><b>Axle camera</b>The AI draws a box around each axle and keeps following the same truck. Axles counted: 4.</div>`],
+[4,'The truck leaves and the trip is closed',`${truck(4,true)}<div class='card2'><b>Exit camera</b>The plate is matched to the entry. Every hour the system checks that all trips are complete.</div>`]]},
+m:{t:'Movie recommender',d:'Type a movie you like to get similar ones. It can also tell you whether a review is positive or negative.',s:[
+[3,'Type a movie you like',`<div class='card2'><b>Search</b>Inception</div>`],
+[5,'Get similar movies',`<div class='g2'><div class='card2'><b>Interstellar</b>Similar story and themes</div><div class='card2'><b>The Prestige</b>Similar story and themes</div><div class='card2'><b>Memento</b>Similar story and themes</div><div class='card2'><b>Tenet</b>Similar story and themes</div></div>`],
+[4,'See if a review is positive',`<div class='card2'>“Mind-bending and beautifully made.”</div><div><span class='pill ok'>Positive</span> Correct about 97% of the time in my tests</div>`]]},
+h:{t:'Face emotion detection',d:'Looks at a photo of a face and guesses the emotion, such as happy or surprised.',s:[
+[3,'Upload a photo',`<div class='big'>🙂</div><div class='card2'>The face is found and prepared for the model.</div>`],
+[5,'The model guesses the emotion',`<div class='big'>😮</div>${bar('Surprise',72)}${bar('Happy',18)}${bar('Neutral',10)}`],
+[4,'Check how often it is right',`<div class='card2'><b>Testing</b>A confusion matrix shows which emotions the model mixes up, so I can improve it.</div>`]]},
+r:{t:'Resume screening',d:'Reads a resume and predicts which job category it fits, to speed up the first round of screening.',s:[
+[3,'Upload a resume',`<div class='card2'><b>resume.pdf</b>PDF, DOCX and TXT files all work.</div>`],
+[4,'The text is turned into numbers',`<div class='card2'><b>Preparing the text</b>Common words are removed and the rest is converted into numbers the models can read.</div>`],
+[5,'Three models choose the job category',`<div class='g2'><div class='card2'><b>Model 1</b>Data Science</div><div class='card2'><b>Model 2</b>Data Science</div><div class='card2'><b>Model 3</b>Data Science</div></div><div><span class='pill ok'>Result: Data Science</span></div>`]]}
+};
+g('dots').addEventListener('click',function(e){var k=Array.prototype.indexOf.call(this.children,e.target);if(k>-1)go(k);});
+var fT='c',fo=null,fa=0,fsec=3,fon=1;
+function fm(s){return ('0'+Math.floor(s/60)).slice(-2)+':'+('0'+(s%60)).slice(-2)}
+var FT={
+c:function(){return fo===null?`<div class='card2'><b>John (Prospect)</b>“It’s a bit over our budget.”</div><div class='fl'>Choose your response</div><div class='g2'><button class='opt' data-o='A'><b>A · Qualify: prioritize pain points</b>“I understand the chaos, John. With all the end-of-quarter activity, where does improving your current setup rank on your priority list this quarter?”<em>Is this a ‘nice to fix’ or a ‘have to fix’ for your team right now?</em></button><button class='opt' data-o='B'><b>B · Reshape: address current chaos</b>“I can only imagine how busy it must be for you right now. What would you ideally want to achieve despite the chaos this quarter?”<em>If you could recover 2–3 hours per rep per week, what would they do with that time?</em></button></div>`:`<div class='card2'><b>You picked option ${fo}</b>The next cards adapt to what John says.</div><div class='card2'><b>Smart nudge</b>John mentioned Salesforce. Try the integration angle.</div><div class='fl'>Your response</div><div class='card2'><b>Address deal management process</b>“It sounds like Salesforce is a key part of your process. Could you share where the team feels the most time is lost while managing deals?”</div><button class='opt' data-o=''>Back to the first cards</button>`},
+a:function(){return `<div class='fl'>Ask FINN anything about product details, objections, pricing or sales strategy.</div><div class='fq'><input value='What’s our price for a 20-seat team?' aria-label='Question for FINN'><button class='opt' id='fgo'>Send</button></div>`+(fa?`<div class='bubble'>Sample answer from a demo knowledge base: pricing is per seat per month, with a volume discount for teams of 20 or more. Source: pricing.pdf</div>`:'')},
+m:function(){return `<div class='card2'><b>Live sentiment</b>NEUTRAL +0.10</div><div class='card2'><b>Live engagement</b>${bar('LOW',24)}</div><div class='card2'><b>Buying intent</b>COLD, 80% confidence. The prospect is talking about their existing setup without showing interest in the new solution.</div><div><span class='pill'>disengaged tone</span><span class='pill'>mention of existing setup</span></div>`},
+t:function(){return `<div class='card2'><b>John (Prospect)</b>“It’s a bit over our budget.”</div><div class='card2'><b>You</b>“Totally fair. What are you comparing us with?”</div><div class='card2'><b>John (Prospect)</b>“We already use Salesforce for most of this.”</div>`}};
+function fr(){g('fb').innerHTML=fon?FT[fT]():`<div class='card2'><b>Session recorded</b>Your call has ended and the session is being processed.</div>`;g('fclock').textContent='Call duration '+fm(fsec)}
+g('finnx').addEventListener('click',function(e){var t=e.target.closest('button');if(!t)return;
+if(t.classList.contains('ftb')){fT=t.dataset.t;document.querySelectorAll('.ftb').forEach(function(x){x.classList.toggle('on',x===t)});}
+else if(t.id==='fgo'){fa=1;}
+else if(t.classList.contains('opt')){fo=t.dataset.o||null;}
+else if(t.id==='fs'){fon=!fon;t.textContent=fon?'Stop':'Start call';}
+fr();});
+setInterval(function(){if(fon&&!g('finnx').hidden){fsec++;g('fclock').textContent='Call duration '+fm(fsec);}},1000);
+fr();
+var cur,ix=0,tm,play=!rd;
+function go(i){var s=D[cur].s;ix=i;g('stage').innerHTML=`<div class='sh'><b>Step ${i+1} of ${s.length}</b>${s[i][1]}</div>`+s[i][2];g('cap').textContent=(i+1)+'/'+s.length+' · '+s[i][1];var ds=g('dots').children;for(var k=0;k<ds.length;k++)ds[k].className=k===i?'on':'';clearTimeout(tm);if(play)tm=setTimeout(function(){go((i+1)%s.length)},s[i][0]*1000);}
+function load(k){cur=k;g('wt').textContent=D[k].t;g('dd').textContent=D[k].d||'';var fx=k==='f';g('stage').hidden=fx;g('finnx').hidden=!fx;g('dots').parentNode.hidden=fx;g('vis').hidden=!D[k].l;g('dots').innerHTML=D[k].s.map(function(){return '<i></i>'}).join('');go(0);}
+document.querySelectorAll('.dtab').forEach(function(b){b.addEventListener('click',function(){document.querySelectorAll('.dtab').forEach(function(x){x.setAttribute('aria-selected',x===b?'true':'false')});load(b.dataset.d);});});
+g('pp').textContent=play?'Pause':'Play';
+g('pp').addEventListener('click',function(){play=!play;this.textContent=play?'Pause':'Play';go(ix);});
+g('nx').addEventListener('click',function(){go((ix+1)%D[cur].s.length);});
+load('n');
+})();
+</script>
+</body>
+</html>
